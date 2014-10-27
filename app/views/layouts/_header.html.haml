@@ -1,0 +1,21 @@
+%nav.top-bar
+  %ul.title-area
+    / Title Area
+    %li.name
+      %h1
+        = link_to 'DemoBlog', root_path
+    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    %li.toggle-topbar.menu-icon
+      %a{ href: "#" }
+        %span Menu
+  %section.top-bar-section
+    %ul.right
+      %li.divider.hide-for-small
+      %li
+        = link_to 'Github', 'https://github.com/Manmohan-menon/DemoBlog'
+      %li.divider.hide-for-small
+      %li
+        = link_to 'Twitter', 'https://twitter.com/'
+      %li.divider.hide-for-small
+      %li
+        = link_to 'About me', '/about'
