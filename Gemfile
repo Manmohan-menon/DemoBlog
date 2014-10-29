@@ -35,6 +35,10 @@ end
 
 gem 'capybara',		group: :test
 
+gem 'activeadmin', github: 'activeadmin'
+
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
