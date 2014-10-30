@@ -143,9 +143,11 @@ GEM
       polyamorous (~> 1.1)
     rdoc (4.1.2)
       json (~> 1.4)
+    redcarpet (3.2.0)
     ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rouge (1.7.2)
     rspec-collection_matchers (1.0.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (2.99.2)
@@ -214,6 +216,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.1)
+  redcarpet
+  rouge
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
