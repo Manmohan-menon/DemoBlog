@@ -1,6 +1,6 @@
 ActiveAdmin.register Post do
 
-  permit_params :title, :body
+  permit_params :title, :body, :published, :author, :author_id
 
 
   # See permitted parameters documentation:

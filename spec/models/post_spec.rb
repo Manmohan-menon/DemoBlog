@@ -7,7 +7,7 @@ describe Post do
 
   	[:title, :body].each do |attribute|
   		it "should validate presence of #{attribute}" do
-  			expect(post).to have_at_least(1).error_on(attribute)
+  			expect(post.errors[attribute].size).to be >= 1
   			expect(post.errors.messages[attribute]).to include "can't be blank"
   		end
   	end
@@ -25,6 +25,22 @@ describe Post do
   	it 'should convert its body to markdown' do
   		markdown_service.should_receive(:render).with('post body')
   		Post.new(:body => 'post body').content
+  	end
+
+  	describe '#author_name'do
+  		context 'when the author exists' do
+  			let(:author) { AdminUser.new }
+  			subject { Post.new(author: author).author_name }
+
+  			before { author.stub(:name) { "Jane Smith" } }
+  			it {should eq "Jane Smith" }
+  		end
+
+  		context 'when the author doesnt exist' do
+  			subject { Post.new.author_name }
+
+  			it { should eq "Nobody" }
+  		end
   	end
   end
 end
